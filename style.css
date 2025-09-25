@@ -15,6 +15,74 @@ body.dark {
   --text: #f0f0f0;
   --primary: #00cc88;
 }
+
+
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: #007bff;
+  color: #fff;
+  position: relative;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.menu-toggle {
+  font-size: 26px;
+  cursor: pointer;
+  display: block;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  right: -250px;
+  width: 250px;
+  height: 100vh;
+  background: #007bff;
+  transition: right 0.3s ease;
+  padding-top: 60px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  margin: 20px 0;
+  text-align: center;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #ffdd57;
+}
+
+nav.active {
+  right: 0;
+}
+
+.menu-toggle.active {
+  content: "×";
+  }
+
+
+
 header {
   background: var(--primary);
   padding: 1rem;
