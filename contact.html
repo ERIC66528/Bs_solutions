@@ -25,10 +25,10 @@
     <p>We’re here to answer your questions and support your business journey.</p>
   </section>
   <section class="contact-form">
-    <form>
-      <input type="text" placeholder="Full Name" required>
-      <input type="email" placeholder="Email Address" required>
-      <textarea placeholder="Your Message" required></textarea>
+    <form id="whatsappForm">
+      <input type="text" id="name" placeholder="Full Name" required>
+      <input type="email" id="email" placeholder="Email Address" required>
+      <textarea id="message" placeholder="Your Message" required></textarea>
       <button type="submit">Send Message</button>
     </form>
   </section>
@@ -39,5 +39,16 @@
     <p>© 2025 BizTech Solutions. All Rights Reserved.</p>
   </footer>
   <script src="script.js"></script>
+  <script>
+    document.getElementById('whatsappForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
+      const whatsappMessage = `Hello, my name is ${name}. My email is ${email}. Message: ${message}`;
+      const url = `https://wa.me/254711374759?text=${encodeURIComponent(whatsappMessage)}`;
+      window.open(url, '_blank');
+    });
+  </script>
 </body>
-</html>
+  </html>
